@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #1f2937;
+  background: #eef2f7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+@keyframes scenario-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@layer components {
+  .scenario-transition {
+    animation: scenario-in 220ms ease-out;
+  }
+
+  .ios-wallpaper {
+    background:
+      radial-gradient(circle at 74% 58%, rgba(239, 116, 161, 0.5), transparent 18rem),
+      radial-gradient(circle at 36% 69%, rgba(238, 225, 188, 0.55), transparent 11rem),
+      radial-gradient(circle at 78% 30%, rgba(0, 122, 255, 0.42), transparent 14rem),
+      linear-gradient(150deg, #06132b 0%, #062f68 39%, #06142e 72%, #020713 100%);
+  }
+
+  .ios-wallpaper-soft {
+    background:
+      radial-gradient(circle at 30% 76%, rgba(255, 255, 255, 0.22), transparent 9rem),
+      rgba(2, 6, 23, 0.04);
+    backdrop-filter: blur(18px) saturate(150%);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+  }
+
+  .ios-glass {
+    background: rgba(108, 145, 194, 0.38);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow: 0 12px 34px rgba(3, 8, 23, 0.24);
+    backdrop-filter: blur(24px) saturate(170%);
+    -webkit-backdrop-filter: blur(24px) saturate(170%);
+  }
+
+  .ios-glass-strong {
+    background: rgba(94, 132, 184, 0.46);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 0 10px 28px rgba(2, 6, 23, 0.24);
+    backdrop-filter: blur(34px) saturate(185%);
+    -webkit-backdrop-filter: blur(34px) saturate(185%);
+  }
+
+  .ios-control {
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.12);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+  }
+
+  .ios-dock {
+    background: rgba(167, 187, 220, 0.32);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 16px 38px rgba(2, 6, 23, 0.26);
+    backdrop-filter: blur(38px) saturate(190%);
+    -webkit-backdrop-filter: blur(38px) saturate(190%);
+  }
+}
